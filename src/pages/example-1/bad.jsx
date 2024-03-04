@@ -1,17 +1,18 @@
+import { Button } from '@/components/ui/button';
 import React, { useState, useEffect } from 'react';
 
 function ChildComponent({ count, message, setCount }) {
   console.info('render child component')
   return (
-    <div>
-      <h3>Child Component</h3>
+    <div className='space-y-2'>
+      <h3 className='text-xl font-semibold'>Child Component</h3>
       <p>Received Count from Parent: {count}</p>
       <p>Received Message from Parent: {message}</p>
-      <button
+      <Button
         onClick={() => {
           setCount(count+1)
         }}
-      >Click Me</button>
+      >Click Me</Button>
     </div>
   );
 }

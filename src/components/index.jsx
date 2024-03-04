@@ -20,6 +20,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Button } from "./ui/button"
+import { MinusCircle, ShoppingCart } from "lucide-react"
 
 export function NavigationBar() {
   return (
@@ -134,12 +135,12 @@ export const ProductCard = ({
         carts.find((cart) => cart.name === name)
         ? (
           <CardFooter>
-            <Button variant="destructive" onClick={removeFromCart}>Remove from cart</Button>
+            <Button variant="destructive" onClick={removeFromCart} className='flex items-center'><MinusCircle className="mr-2"/> Remove from cart</Button>
           </CardFooter>
         )
         : (
           <CardContent>
-            <Button onClick={addToCart}>Add to cart</Button>
+            <Button onClick={addToCart} className='flex items-center'><ShoppingCart className="mr-2"/> Add to cart</Button>
           </CardContent>
         )
       }

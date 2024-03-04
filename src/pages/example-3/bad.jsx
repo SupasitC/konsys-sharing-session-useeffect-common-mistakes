@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Checkbox } from '@/components/ui/checkbox'
 import { Button } from '@/components/ui/button'
+import { CircleDollarSign } from 'lucide-react'
 
 const cart = [
   {
@@ -86,7 +87,7 @@ export const ChildComponent = ({
           </div>
         ))
       }
-      <Button className='bg-green-500'>Checkout</Button>
+      <Button className='bg-green-500 flex items-center'><CircleDollarSign className="mr-2"/> Checkout</Button>
     </div>
   )
 }
